@@ -1,5 +1,7 @@
-package br.com.mermaid.citiesapi.cities;
+package br.com.mermaid.citiesapi.cities.resources;
 
+import br.com.mermaid.citiesapi.cities.entities.City;
+import br.com.mermaid.citiesapi.cities.repository.CityRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;

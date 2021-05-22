@@ -1,4 +1,4 @@
-package br.com.mermaid.citiesapi.countries;
+package br.com.mermaid.citiesapi.countries.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

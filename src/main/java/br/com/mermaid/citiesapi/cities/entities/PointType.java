@@ -1,4 +1,4 @@
-package br.com.mermaid.citiesapi.cities;
+package br.com.mermaid.citiesapi.cities.entities;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;

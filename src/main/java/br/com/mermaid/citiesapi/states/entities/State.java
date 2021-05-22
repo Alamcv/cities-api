@@ -1,6 +1,6 @@
-package br.com.mermaid.citiesapi.states;
+package br.com.mermaid.citiesapi.states.entities;
 
-import br.com.mermaid.citiesapi.countries.Country;
+import br.com.mermaid.citiesapi.countries.entities.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;

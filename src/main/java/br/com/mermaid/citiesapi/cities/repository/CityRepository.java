@@ -1,5 +1,6 @@
-package br.com.mermaid.citiesapi.cities;
+package br.com.mermaid.citiesapi.cities.repository;
 
+import br.com.mermaid.citiesapi.cities.entities.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

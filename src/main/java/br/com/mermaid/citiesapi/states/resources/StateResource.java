@@ -1,5 +1,7 @@
-package br.com.mermaid.citiesapi.states;
+package br.com.mermaid.citiesapi.states.resources;
 
+import br.com.mermaid.citiesapi.states.entities.State;
+import br.com.mermaid.citiesapi.states.repository.StateRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

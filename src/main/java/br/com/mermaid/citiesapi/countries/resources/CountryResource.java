@@ -1,6 +1,6 @@
-package br.com.mermaid.citiesapi;
+package br.com.mermaid.citiesapi.countries.resources;
 
-import br.com.mermaid.citiesapi.countries.Country;
+import br.com.mermaid.citiesapi.countries.entities.Country;
 import br.com.mermaid.citiesapi.countries.repository.CountryRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

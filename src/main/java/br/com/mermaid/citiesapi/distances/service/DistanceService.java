@@ -1,7 +1,7 @@
 package br.com.mermaid.citiesapi.distances.service;
 
-import br.com.mermaid.citiesapi.cities.City;
-import br.com.mermaid.citiesapi.cities.CityRepository;
+import br.com.mermaid.citiesapi.cities.entities.City;
+import br.com.mermaid.citiesapi.cities.repository.CityRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.geo.Point;
