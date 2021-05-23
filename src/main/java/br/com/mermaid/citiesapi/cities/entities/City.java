@@ -1,14 +1,12 @@
 package br.com.mermaid.citiesapi.cities.entities;
 
+import br.com.mermaid.citiesapi.states.entities.State;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 import org.springframework.data.geo.Point;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "cidade")
@@ -23,7 +21,10 @@ public class City {
     @Column(name = "nome")
     private String name;
 
-    private Integer uf;
+//    private Integer uf;
+    @ManyToOne
+    @JoinColumn(name = "uf", referencedColumnName = "id")
+    private State state;
 
     private Integer ibge;
 
@@ -43,7 +44,8 @@ public class City {
                 final String geolocation, final Point location) {
         this.id = id;
         this.name = name;
-        this.uf = uf;
+//        this.uf = uf;
+        this.state = getState();
         this.ibge = ibge;
         this.geolocation = geolocation;
         this.location = location;
@@ -57,9 +59,9 @@ public class City {
         return name;
     }
 
-    public Integer getUf() {
-        return uf;
-    }
+//    public Integer getUf() {
+//        return uf;
+//    }
 
     public Integer getIbge() {
         return ibge;
@@ -71,5 +73,9 @@ public class City {
 
     public Point getLocation() {
         return location;
+    }
+
+    public State getState() {
+        return state;
     }
 }
