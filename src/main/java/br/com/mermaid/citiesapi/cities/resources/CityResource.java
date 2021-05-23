@@ -2,16 +2,14 @@ package br.com.mermaid.citiesapi.cities.resources;
 
 import br.com.mermaid.citiesapi.cities.entities.City;
 import br.com.mermaid.citiesapi.cities.repository.CityRepository;
-import br.com.mermaid.citiesapi.countries.entities.Country;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("cities")

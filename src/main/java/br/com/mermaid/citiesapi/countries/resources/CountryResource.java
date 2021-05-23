@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequestMapping("/countries")
 public class CountryResource {
 
-    private CountryRepository repository;
+    private final CountryRepository repository;
 
     public CountryResource(CountryRepository repository) {
         this.repository = repository;

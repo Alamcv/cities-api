@@ -5,7 +5,6 @@ import br.com.mermaid.citiesapi.cities.repository.CityRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.geo.Point;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -55,17 +54,21 @@ public class DistanceService {
         switch (unit) {
             case "mi":
                 distance = (distanceMeters / 1000) / MILES;
+                unit = "miles";
                 break;
             case "m":
                 distance = distanceMeters;
+                unit = "meters";
                 break;
             default:
                 distance = (distanceMeters / 1000);
+                unit = "kilometers";
                 break;
         }
-        return String.format("{\"content\":[{\"origin\":\"%s-%s\", \"destiny\":\"%s-%s\", \"distance\": \"%.2f%s\", \"url\":\"%s\"}]}",
+        return String.format("{\"content\":[{\"origin\":\"%s-%s\", \"destiny\":\"%s-%s\", \"distance\": \"%.2f\", \"unity\": \"%s\", \"url\":\"%s\"}]}",
                                 cities.get(0).getName(),cities.get(0).getState().getUf(),
                                 cities.get(1).getName(), cities.get(1).getState().getUf(),
                                 distance, unit, url);
+
     }
 }
